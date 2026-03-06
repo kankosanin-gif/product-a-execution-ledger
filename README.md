@@ -23,3 +23,8 @@ Evidence-first execution ledger for work-item governance.
 - Add JSON/TOML schema draft
 - Add CLI validator prototype
 - Add sample ledger entries
+
+
+## Artifacts
+- JSON Schema: `schema/ledger.schema.json`
+- TOML Example: `examples/ledger.example.toml`
