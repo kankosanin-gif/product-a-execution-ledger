@@ -23,3 +23,6 @@ Evidence-first execution ledger for work-item governance.
 - Add JSON/TOML schema draft
 - Add CLI validator prototype
 - Add sample ledger entries
+
+## Governance templates
+- Gate Decision Log: \n- Escalation SLA: \n- Proof-of-Work template: \n
