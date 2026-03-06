@@ -1,0 +1,16 @@
+work_item_id = "W-001"
+contract_id = "C-A-001"
+owner = "kuro"
+gate_state = "G2"
+risk = "low"
+
+[escalation]
+status = "none"
+
+[[evidence]]
+type = "issue"
+url = "https://github.com/kankosanin-gif/product-a-execution-ledger/issues/1"
+
+[[evidence]]
+type = "doc"
+url = "https://github.com/kankosanin-gif/product-a-execution-ledger/blob/main/README.md"

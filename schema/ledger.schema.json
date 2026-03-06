@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kankosanin-gif/product-a-execution-ledger/schema/ledger.schema.json",
+  "title": "Agent Execution Ledger Entry",
+  "type": "object",
+  "required": ["work_item_id", "contract_id", "owner", "gate_state", "risk", "escalation", "evidence"],
+  "properties": {
+    "work_item_id": { "type": "string", "minLength": 1 },
+    "contract_id": { "type": "string", "minLength": 1 },
+    "owner": { "type": "string", "minLength": 1 },
+    "gate_state": { "type": "string", "enum": ["G1", "G2", "G3", "G4", "G5"] },
+    "risk": { "type": "string", "enum": ["low", "med", "high"] },
+    "escalation": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": { "type": "string", "enum": ["none", "active"] },
+        "sla_deadline": { "type": "string", "format": "date-time" }
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "url"],
+        "properties": {
+          "type": { "type": "string", "enum": ["issue", "pr", "log", "report", "doc"] },
+          "url": { "type": "string", "format": "uri" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
